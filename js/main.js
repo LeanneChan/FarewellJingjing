@@ -8,10 +8,10 @@
 
 var map = L.map('map', {
     crs: L.CRS.Simple,
-    minZoom: -1
+    minZoom: -2
 });
 
-var bounds = [[0,0], [2000,800]]
+var bounds = [[0,0], [2000,1200]]
 var image = L.imageOverlay('js/images/jj_card.png', bounds).addTo(map);
 
 map.fitBounds(bounds);
