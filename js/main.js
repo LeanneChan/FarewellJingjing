@@ -8,12 +8,13 @@
 
 var map = L.map('map', {
     crs: L.CRS.Simple,
-    minZoom: -5
+    minZoom: -1
 });
 
-var bounds = [[0,0], [1000,1000]]
-var image = L.imageOverlay('Copy of Jingjing Card.png', bounds).addTo(map);
+var bounds = [[0,0], [2000,800]]
+var image = L.imageOverlay('js/images/jj_card.png', bounds).addTo(map);
 
+map.fitBounds(bounds);
 
 // var Stamen_TonerLite = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
 //   attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
@@ -25,19 +26,19 @@ var image = L.imageOverlay('Copy of Jingjing Card.png', bounds).addTo(map);
 
 
 
-// messages 
-var myMarkers=makeMarkers(messages);
+// // messages 
+// var myMarkers=makeMarkers(messages);
 
-console.log(myMarkers)
+// console.log(myMarkers)
 
-plotMarkers(myMarkers)
+// plotMarkers(myMarkers)
 
-// russia 
-var outlierMarker=makeMarkers_russia(russia);
+// // russia 
+// var outlierMarker=makeMarkers_russia(russia);
 
-console.log(outlierMarker)
+// console.log(outlierMarker)
 
-plotMarkers(outlierMarker)
+// plotMarkers(outlierMarker)
 
 
 
