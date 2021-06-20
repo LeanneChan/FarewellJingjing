@@ -1,28 +1,33 @@
 /* ================================
-Week 6 Assignment: Slide Model
+Slide Model --> cannot remove original image with markers
 ================================ */
 
 $('#cardMap').click(function(e) {
-	map.removeLayer(image2)
-	// bounds = [[0,0], [2000,1200]]
-	// L.imageOverlay('js/images/jj_card.png', bounds).addTo(map);
-	// map.fitBounds(bounds);
-	// map.setZoom(-1); 
-	// myMarkers=makeMarkers(messages);
-	plotMarkers(myMarkers)
+	map.removeLayer(image2);
+	map.removeLayer(image3);
+	map.removeLayer(cover);
+
+	map.setView([1000,600], -1.75, { animation: true });        
+
+	
 });
 
 
-$('#ewasteButton').click(function(e) {
+$('#hiddenMeanings').click(function(e) {
+ 	map.removeLayer(image3);
+ 	cover.addTo(map);
 
- 	
- 	removeMarkers(myMarkers);
- 	image2.addTo(map)
- 	// map.removeLayer(image);
-	// bounds = [[0,0], [1254, 904]]
+ 	image2.addTo(map);
+	
+	map.setView([440, 300], 0.2, { animation: true }); 
+});
 
-	//map.fitBounds(bounds);
-	//map.setZoom(3)
+$('#bookclub').click(function(e) {
+ 	map.removeLayer(image2);
+ 	cover.addTo(map);
+ 	image3.addTo(map);
+	
+	map.setView([1000,600], -1.5, { animation: true }); 
 });
 
 

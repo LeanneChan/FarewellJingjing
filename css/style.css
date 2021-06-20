@@ -77,23 +77,29 @@ button {
   font-size: 16px;
 }
 
-#ewasteButton{
-  background-color: #77B2A5;
+#hiddenMeanings{
+  background-color: #4bc3cb;
 }
 
 #cardMap{
-  background-color: #B4C248;
+  background-color: #f3d314;
 }
 
+#bookclub{
+  background-color: #eb1483;
+}
+
+
 #title{
-  color: #30b4b6;
+  color: #049c94;
   font-size: xxx-large;
+  margin-top: 0px;
 }
 
 #img_side {
   display: block;
-  margin-left: 30%;
-  margin-right: 30%;
+  margin-left: 40%;
+  margin-right: 40%;
   width: 100%;
 }
 
