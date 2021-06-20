@@ -42,6 +42,7 @@ var myMarkers=makeMarkers(messages);
 console.log(myMarkers)
 plotMarkers(myMarkers)
 
+
 // // russia 
 // var outlierMarker=makeMarkers_russia(russia);
 

@@ -1,14 +1,27 @@
 /* LOAD DATA FUNCTIONS*/
 var create_marker = function(row){
-    var lat=row.geometry.coordinates[1];
-    var lng=row.geometry.coordinates[0];
-    var name=row.properties.Name;
+    var lat = row.geometry.coordinates[1];
+    var lng = row.geometry.coordinates[0];
+    var name = row.properties.Name;
     var msg = row.properties.Message;
     var meaning = row.properties.Meaning;
-    var radius= 8;
+    var radius = 0.1;
     var pathOpts = {'radius': radius, 'fillColor': '#FFFFFF', 'fillOpacity':0.5, 'stroke': false, 
                     'pane': 'overlayPane'};
-    var marker = L.circleMarker([lat, lng], pathOpts).bindPopup("<b>FP: </b>"+name+"</br> <b>Description: </b>"+msg+"</br> <b>Reporting_Category: </b>"+meaning);
+    var marker = L.circleMarker([lat, lng], pathOpts).bindPopup("<b>FP: </b>"+name+"</br> <b>Description: </b>"+msg+"</br> <b>Reporting Category: </b>"+meaning);
+    return marker;
+}
+
+var create_visible_marker = function(row){
+    var lat = row.geometry.coordinates[1];
+    var lng = row.geometry.coordinates[0];
+    var name = row.properties.Name;
+    var msg = row.properties.Message;
+    var meaning = row.properties.Meaning;
+    var radius = 15;
+    var pathOpts = {'radius': radius, 'fillColor': '#FFFFFF', 'fillOpacity':0.75, 'stroke': false, 
+                    'pane': 'overlayPane'};
+    var marker = L.circleMarker([lat, lng], pathOpts).bindPopup("<b>FP: </b>"+name+"</br> <b>Description: </b>"+msg+"</br> <b>Reporting Category: </b>"+meaning);
     return marker;
 }
 

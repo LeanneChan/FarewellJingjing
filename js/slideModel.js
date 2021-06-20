@@ -6,12 +6,15 @@ $('#cardMap').click(function(e) {
 	map.removeLayer(image2);
 	map.removeLayer(image3);
 	map.removeLayer(cover);
-
+	myMarkers.forEach(function(marker){marker.setRadius(0.1);});
 	map.setView([1000,600], -1.75, { animation: true });        
 
 	
 });
 
+$('#showMarkers').click(function(e) {
+	myMarkers.forEach(function(marker){marker.setRadius(15);});
+});
 
 $('#hiddenMeanings').click(function(e) {
  	map.removeLayer(image3);
