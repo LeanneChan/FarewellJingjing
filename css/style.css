@@ -106,11 +106,8 @@ button {
   width: 100%;
 }
 
-#russiaImg {
-  display: block;
-  width: 560px;
-  margin-left: 0%;
-  margin-right: 0%;
 
+.legend input:checked ~ .showMarkers {
+  background-color: #f3d314;
 }
 

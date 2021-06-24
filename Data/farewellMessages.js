@@ -464,5 +464,20 @@ var messages = [
     "Map_y":16.5,
     "Map_x":15.25
     }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 853.2110092,393.5185185 ]
+    },
+    "properties": {
+    "S/N":32,
+    "Meaning":"Cat Feeding",
+    "Name":"Eddie Chua",
+    "Message":"All the best in the new posting and take care, Jing Jing!\n\nRgds,\nEddie\n",
+    "Map_y":8.5,
+    "Map_x":15.5
+    }
   }
 ]

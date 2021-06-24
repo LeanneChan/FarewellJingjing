@@ -7,14 +7,23 @@ $('#cardMap').click(function(e) {
 	map.removeLayer(image3);
 	map.removeLayer(cover);
 	myMarkers.forEach(function(marker){marker.setStyle({fillOpacity: 0})});
-	map.setView([1000,600], -1.75, { animation: true });        
+	map.setView([1000,600], -1.75, { animation: true });   
+	document.getElementById('showMarkers').checked = false  // reset checkbox
 
 	
 });
 
 $('#showMarkers').click(function(e) {
-	myMarkers.forEach(function(marker){marker.setStyle({fillOpacity: 0.5})});
+	const cb = document.getElementById('showMarkers');
+	console.log(cb.checked);
+	if(cb.checked){
+		myMarkers.forEach(function(marker){marker.setStyle({fillOpacity: 0.5})});
+	} else {
+		myMarkers.forEach(function(marker){marker.setStyle({fillOpacity: 0})});
+
+	}
 });
+
 
 $('#hiddenMeanings').click(function(e) {
  	map.removeLayer(image3);
@@ -23,6 +32,7 @@ $('#hiddenMeanings').click(function(e) {
  	image2.addTo(map);
 	
 	map.setView([440, 300], 0.2, { animation: true }); 
+	document.getElementById('showMarkers').checked = false
 });
 
 $('#bookclub').click(function(e) {
@@ -31,6 +41,7 @@ $('#bookclub').click(function(e) {
  	image3.addTo(map);
 	
 	map.setView([1000,600], -1.5, { animation: true }); 
+	document.getElementById('showMarkers').checked = false
 });
 
 
